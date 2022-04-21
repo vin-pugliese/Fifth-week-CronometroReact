@@ -49,19 +49,6 @@ public class TimeRecordController {
     ResponseEntity<?> update(@RequestParam String id, @RequestParam String finish){
         recordService.update(id, finish);
         return new ResponseEntity<>(HttpStatus.OK);
-
-        /*
-        Query query = new Query();
-        query.addCriteria(Criteria.where("id").is(id));
-        TimeRecord timer1 = mongoOperation.findOne(query, TimeRecord.class);
-
-        Update update = new Update();
-        LocalTime actualTime = LocalTime.now();
-        update.set("timeFinish", actualTime.toString());
-
-        mongoOperation.updateFirst(query, update, TimeRecord.class);
-        return new ResponseEntity<>(timer1, HttpStatus.OK);
-        */
     }
 
     @DeleteMapping(path="/{id}")
