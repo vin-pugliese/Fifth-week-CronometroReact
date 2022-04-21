@@ -9,8 +9,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Getter
-@Setter
 @Document(collection = "records")
 public class TimeRecord {
 
