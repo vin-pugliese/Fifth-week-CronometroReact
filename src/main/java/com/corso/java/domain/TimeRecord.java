@@ -1,9 +1,6 @@
 package com.corso.java.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import org.bson.BsonDateTime;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -12,14 +9,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Getter
+@Setter
 @Document(collection = "records")
 public class TimeRecord {
 
     @Id
-    String id;
+    private String id;
 
-    String nome;
-    String lastName;
-    String timeStart;
-    String timeFinish;
+    private String nome;
+    private String lastName;
+    private String timeStart;
+    private String timeFinish;
 }
